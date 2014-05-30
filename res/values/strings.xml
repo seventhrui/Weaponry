@@ -1,13 +1,8 @@
 <resources>
     <string name="app_name">MyAPP</string>
     <string-array name="planets_array">
-        <item>一</item>
-        <item>二</item>
-        <item>三</item>
-        <item>四</item>
-        <item>五</item>
-        <item>六</item>
-        <item>七</item>
+        <item>GridView</item>
+        <item>ListView</item>
     </string-array>
     <string name="drawer_open">打开状态</string>
     <string name="drawer_close">关闭状态</string>

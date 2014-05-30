@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.seventh.weaponry.R;
+import com.seventh.weaponry.adapter.ListViewItemAdapter;
 
 import android.content.Context;
 import android.widget.SimpleAdapter;
@@ -30,7 +31,7 @@ public class FunAndFunType {
 		return funlist;
 	}
 	/**
-	 * 1gv
+	 * GridView
 	 * @param context
 	 * @return
 	 */
@@ -45,141 +46,26 @@ public class FunAndFunType {
 			lstImageItem.add(map);
 		}
 		SimpleAdapter saImageItems = new SimpleAdapter(context, lstImageItem,
-				R.layout.item_grid_startmenu,
+				R.layout.item_gridview,
 				new String[] { "ItemImage", "ItemText" }, new int[] {
 						R.id.ItemImage, R.id.ItemText });
 		return saImageItems;
 	}
 	
 	/**
-	 * 2gv
+	 * ListView
 	 * @param context
 	 * @return
 	 */
-	public static SimpleAdapter get_2(Context context){
-		lstImageItem = new ArrayList<HashMap<String, Object>>();
-		Integer[] mIds = { R.drawable.ic_2, R.drawable.ic_2,R.drawable.ic_2, R.drawable.ic_2, R.drawable.ic_2 };
-		String[] mNames = { "二一", "二二", "二三", "二四", "二五" };
-		for (int i = 0; i < mIds.length; i++) {
-			HashMap<String, Object> map = new HashMap<String, Object>();
-			map.put("ItemImage", mIds[i]);// 添加图像资源的ID
-			map.put("ItemText", mNames[i]);// 按序号做ItemText
-			lstImageItem.add(map);
+	public static ListViewItemAdapter get_2(Context context){
+		List<String> lsitem=new ArrayList<String>();
+		String[] strs={"二一", "二二", "二三", "二四", "二五"};
+		for(int i=0;i<strs.length;i++){
+			lsitem.add(strs[i]);
 		}
-		SimpleAdapter saImageItems = new SimpleAdapter(context, lstImageItem,
-				R.layout.item_grid_startmenu,
-				new String[] { "ItemImage", "ItemText" }, new int[] {
-						R.id.ItemImage, R.id.ItemText });
-		return saImageItems;
+		ListViewItemAdapter lvia=new ListViewItemAdapter(context,lsitem);
+		return lvia;
+		
 	}
 	
-	/**
-	 * 3gv
-	 * @param context
-	 * @return
-	 */
-	public static SimpleAdapter get_3(Context context){
-		lstImageItem = new ArrayList<HashMap<String, Object>>();
-		Integer[] mIds = { R.drawable.ic_3, R.drawable.ic_3, R.drawable.ic_3,R.drawable.ic_3, R.drawable.ic_3, R.drawable.ic_3 };
-		String[] mNames = { "三一", "三二", "三三", "三四", "三五","三六" };
-		for (int i = 0; i < mIds.length; i++) {
-			HashMap<String, Object> map = new HashMap<String, Object>();
-			map.put("ItemImage", mIds[i]);// 添加图像资源的ID
-			map.put("ItemText", mNames[i]);// 按序号做ItemText
-			lstImageItem.add(map);
-		}
-		SimpleAdapter saImageItems = new SimpleAdapter(context, lstImageItem,
-				R.layout.item_grid_startmenu,
-				new String[] { "ItemImage", "ItemText" }, new int[] {
-						R.id.ItemImage, R.id.ItemText });
-		return saImageItems;
-	}
-	
-	/**
-	 * 4gv
-	 * @param context
-	 * @return
-	 */
-	public static SimpleAdapter get_4(Context context){
-		lstImageItem = new ArrayList<HashMap<String, Object>>();
-		Integer[] mIds = { R.drawable.ic_4, R.drawable.ic_4,R.drawable.ic_4, R.drawable.ic_4 };
-		String[] mNames = { "四一", "四二", "四三", "四四"};
-		for (int i = 0; i < mIds.length; i++) {
-			HashMap<String, Object> map = new HashMap<String, Object>();
-			map.put("ItemImage", mIds[i]);// 添加图像资源的ID
-			map.put("ItemText", mNames[i]);// 按序号做ItemText
-			lstImageItem.add(map);
-		}
-		SimpleAdapter saImageItems = new SimpleAdapter(context, lstImageItem,
-				R.layout.item_grid_startmenu,
-				new String[] { "ItemImage", "ItemText" }, new int[] {
-						R.id.ItemImage, R.id.ItemText });
-		return saImageItems;
-	}
-	
-	/**
-	 * 5gv
-	 * @param context
-	 * @return
-	 */
-	public static SimpleAdapter get_5(Context context){
-		lstImageItem = new ArrayList<HashMap<String, Object>>();
-		Integer[] mIds = { R.drawable.ic_5, R.drawable.ic_5, R.drawable.ic_5,R.drawable.ic_5, R.drawable.ic_5 };
-		String[] mNames = { "五一", "五二", "五三", "五四","五五"};
-		for (int i = 0; i < mIds.length; i++) {
-			HashMap<String, Object> map = new HashMap<String, Object>();
-			map.put("ItemImage", mIds[i]);// 添加图像资源的ID
-			map.put("ItemText", mNames[i]);// 按序号做ItemText
-			lstImageItem.add(map);
-		}
-		SimpleAdapter saImageItems = new SimpleAdapter(context, lstImageItem,
-				R.layout.item_grid_startmenu,
-				new String[] { "ItemImage", "ItemText" }, new int[] {
-						R.id.ItemImage, R.id.ItemText });
-		return saImageItems;
-	}
-	
-	/**
-	 * 6gv
-	 * @param context
-	 * @return
-	 */
-	public static SimpleAdapter get_6(Context context){
-		lstImageItem = new ArrayList<HashMap<String, Object>>();
-		Integer[] mIds = { R.drawable.ic_6, R.drawable.ic_6 };
-		String[] mNames = { "六一", "六二"};
-		for (int i = 0; i < mIds.length; i++) {
-			HashMap<String, Object> map = new HashMap<String, Object>();
-			map.put("ItemImage", mIds[i]);// 添加图像资源的ID
-			map.put("ItemText", mNames[i]);// 按序号做ItemText
-			lstImageItem.add(map);
-		}
-		SimpleAdapter saImageItems = new SimpleAdapter(context, lstImageItem,
-				R.layout.item_grid_startmenu,
-				new String[] { "ItemImage", "ItemText" }, new int[] {
-						R.id.ItemImage, R.id.ItemText });
-		return saImageItems;
-	}
-	
-	/**
-	 * 7gv
-	 * @param context
-	 * @return
-	 */
-	public static SimpleAdapter get_7(Context context){
-		lstImageItem = new ArrayList<HashMap<String, Object>>();
-		Integer[] mIds = {R.drawable.ic_7, R.drawable.ic_7, R.drawable.ic_7,R.drawable.ic_7, R.drawable.ic_7 };
-		String[] mNames = { "七一", "七二","七三","七四","七五"};
-		for (int i = 0; i < mIds.length; i++) {
-			HashMap<String, Object> map = new HashMap<String, Object>();
-			map.put("ItemImage", mIds[i]);// 添加图像资源的ID
-			map.put("ItemText", mNames[i]);// 按序号做ItemText
-			lstImageItem.add(map);
-		}
-		SimpleAdapter saImageItems = new SimpleAdapter(context, lstImageItem,
-				R.layout.item_grid_startmenu,
-				new String[] { "ItemImage", "ItemText" }, new int[] {
-						R.id.ItemImage, R.id.ItemText });
-		return saImageItems;
-	}
 }
